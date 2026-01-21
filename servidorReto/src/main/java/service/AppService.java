@@ -1,15 +1,25 @@
 package service;
 
+import java.io.File;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.annotation.PostConstruct;
 import model.App;
 
 public class AppService {
-	private final ArrayList<App> apps = new ArrayList<>();
+	private ArrayList<App> app = new ArrayList<>();
+	private final File jsonFile = Paths.get("app.json").toFile();
+	private final ObjectMapper mapper = new ObjectMapper();
+	
+	
 	
 	// Obtener app por ID
     public App getAppById(int id) {
-        return apps.stream()
+        return app.stream()
                 .filter(app -> app.getId() == id)
                 .findFirst()
                 .orElse(null);
@@ -17,10 +27,10 @@ public class AppService {
     
  // Actualizar app existente
     public App updateApp(int id, App updatedApp) {
-        for (int i = 0; i < apps.size(); i++) {
-            if (apps.get(i).getId() == (id)) {
+        for (int i = 0; i < app.size(); i++) {
+            if (app.get(i).getId() == (id)) {
                 updatedApp.setId(id);
-                apps.set(i, updatedApp);
+                app.set(i, updatedApp);
                 return updatedApp;
             }
         }

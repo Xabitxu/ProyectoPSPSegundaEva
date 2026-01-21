@@ -1,0 +1,29 @@
+[ 
+	{
+    "id": 1,
+    "nombre": "Fitness Challenge",
+    "descripcion": "Juego de retos fitness diarios",
+    "categoria": "Fitness",
+    "rutaApk": "/apks/fitness.apk",
+    "rutaImagen": "/images/fitness.jpg",
+    "hash": "a1b2c3d4e5f6789012345678901234567890abcd"
+  },
+  {
+    "id": 2,
+    "nombre": "Mindful Games",
+    "descripcion": "Juegos para mejorar la concentración",
+    "categoria": "Mental",
+    "rutaApk": "/apks/mindful.apk",
+    "rutaImagen": "/images/mindful.jpg",
+    "hash": "f1e2d3c4b5a6789012345678901234567890efgh"
+  },
+  {
+    "id": 3,
+    "nombre": "Nutrition Tracker",
+    "descripcion": "Seguimiento de hábitos alimenticios",
+    "categoria": "Nutrición",
+    "rutaApk": "/apks/nutrition.apk",
+    "rutaImagen": "/images/nutrition.jpg",
+    "hash": "0987654321abcdef1234567890abcdef12345678"
+  }
+]
